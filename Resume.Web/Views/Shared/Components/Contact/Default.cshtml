@@ -1,0 +1,107 @@
+﻿<section data-id="contact" class="animated-section">
+    <div class="section-content">
+        <div class="page-title">
+            <h2>تماس</h2>
+            <h4>با من در ارتباط باشید</h4>
+        </div>
+
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-12 col-md-4 col-lg-12 col-xl-4">
+                <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-map-marker"></i>
+                    <h4>تبریز</h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-12 col-xl-4">
+                <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-phone-handset"></i>
+                    <h4><span class="ltr-text">0912 345 67 89</span></h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-12 col-xl-4">
+                <div class="lm-info-block gray-default">
+                    <i class="lnr lnr-envelope"></i>
+                    <h4><a href="mailto:info@example.com">info@example.com</a></h4>
+                    <span class="lm-info-block-value"></span>
+                    <span class="lm-info-block-text"></span>
+                </div>
+            </div>
+            <!-- End of Contact Info -->
+        </div>
+
+        <div class="row">
+            <!-- Google Map -->
+            <div class="col-12">
+                <div class="white-space-20"></div>
+                <!-- Google Map -->
+                <div class="lmpixels-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7915.431994484519!2d46.33274798575868!3d38.06475788936543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDAzJzUzLjgiTiA0NsKwMTknMzkuNCJF!5e0!3m2!1sfa!2s!4v1604682923071!5m2!1sfa!2s" width="600" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            <!-- End of Google Map -->
+        </div>
+
+
+        <div class="row">
+
+            <!-- Contact Form -->
+            <div class="col-12">
+                <div class="white-space-30"></div>
+                <div class="block-title">
+                    <h3>چطور می‌توانم کمکتان کنم؟</h3>
+                </div>
+
+                <form id="contact_form" class="contact-form mt-1" action="php/contact_form.php" method="post">
+
+                    <div class="messages"></div>
+
+                    <div class="controls two-columns">
+                        <div class="fields clearfix">
+                            <div class="left-column">
+                                <div class="form-group form-group-with-icon">
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="نام الزامی است">
+                                    <label>نام کامل</label>
+                                    <div class="form-control-border"></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                <div class="form-group form-group-with-icon">
+                                    <input id="form_email" type="email" name="email" class="form-control text-left" dir="ltr" placeholder="" required="required" data-error="ایمیل معتبر الزامی است">
+                                    <label>آدرس ایمیل</label>
+                                    <div class="form-control-border"></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                <div class="form-group form-group-with-icon">
+                                    <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="موضوع الزامی است">
+                                    <label>موضوع</label>
+                                    <div class="form-control-border"></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="right-column">
+                                <div class="form-group form-group-with-icon">
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="" rows="5" required="required" data-error="متن پیام الزامی است"></textarea>
+                                    <label>پیام</label>
+                                    <div class="form-control-border"></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="button btn-send" value="ارسال پیام">
+                    </div>
+                </form>
+            </div>
+            <!-- End of Contact Form -->
+        </div>
+
+    </div>
+</section>

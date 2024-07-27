@@ -1,0 +1,155 @@
+﻿@model LoginViewModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <!-- ===============================================-->
+  <!--    Document Title-->
+  <!-- ===============================================-->
+  <title></title>
+
+  <!-- ===============================================-->
+  <!--    Favicons-->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/Admin/assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Admin/assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Admin/assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/Admin/assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="/Admin/assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="/Admin/assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="/Admin/assets/js/config.js"></script>
+  <script src="/Admin/vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->
+  <!--    <link rel="preconnect" href="https://fonts.gstatic.com">-->
+  <!--    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">-->
+    <link href="./Admin/vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
+  <link href="/Admin/assets/css/fonts.css" rel="stylesheet">
+  <link href="/Admin/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+  <link href="/Admin/assets/css/theme.min.css" rel="stylesheet" id="style-default">
+  <link href="/Admin/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+  <link href="/Admin/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+  <script>
+    var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+    if (isRTL) {
+      var linkDefault = document.getElementById('style-default');
+      var userLinkDefault = document.getElementById('user-style-default'); 
+      linkDefault.setAttribute('disabled', true);
+      userLinkDefault.setAttribute('disabled', true);
+      document.querySelector('html').setAttribute('dir', 'rtl');
+    } else {
+      var linkRTL = document.getElementById('style-rtl');
+      var userLinkRTL = document.getElementById('user-style-rtl');
+      document.querySelector('html').setAttribute('dir', 'ltr');
+      linkRTL.setAttribute('disabled', true);
+      userLinkRTL.setAttribute('disabled', true);
+    }
+  </script>
+</head>
+
+
+<body>
+
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+<main class="main" id="top">
+  <div class="container-fluid">
+    <div class="row min-vh-100 flex-center g-0">
+      <div class="col-lg-8 col-xxl-5 py-3 position-relative"><img class="bg-auth-circle-shape" src="/Admin/assets/img/icons/spot-illustrations/bg-shape.png" alt="" width="250"><img class="bg-auth-circle-shape-2" src="/Admin/assets/img/icons/spot-illustrations/shape-1.png" alt="" width="150">
+        <div class="card overflow-hidden z-index-1">
+          <div class="card-body p-0">
+            <div class="row g-0 h-100">
+              <div class="col-md-5 text-center bg-card-gradient">
+                <div class="position-relative p-4 pt-md-5 pb-md-7 light">
+                  <div class="bg-holder bg-auth-card-shape" style="background-image:url(/Admin/assets/img/icons/spot-illustrations/half-circle.png);"></div>
+                  <!--/.bg-holder-->
+                  <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="../../../index.html">شاهین</a>
+                    <p class="opacity-75 text-white">با قدرت فالکون، اکنون می توانید فقط بر روی کارگزاران محصولات دیجیتال خود تمرکز کنید، در حالی که طراحی UI را بر عهده ما بگذارید!</p>
+                  </div>
+                </div>
+                <div class="mt-3 mb-4 mt-md-4 mb-md-5 light">
+                  <p class="text-white">حساب کاربری ندارید؟ <br><a class="text-decoration-underline link-light" href="../../../pages/authentication/card/register.html">شروع کنید!</a></p>
+                </div>
+              </div>
+              <div class="col-md-7 d-flex flex-center">
+                <div class="p-4 p-md-5 flex-grow-1">
+                  <div class="row flex-between-center">
+                    <div class="col-auto">
+                      <h3>ورود به حساب کاربری</h3>
+                    </div>
+                  </div>
+                  <form id="login" asp-action="LogIn" >
+                    <div class="mb-3">
+                        <label class="form-label" for="card-email">ایمیل یا نام کاربری</label>
+                        <input asp-for="Username" class="form-control" id="card-email" type="email">
+                        <span asp-validation-for="Username"></span>
+                    </div>
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between">
+                          <label class="form-label" for="card-password">کلمه عبور</label>
+                      </div>
+                      <input asp-for="Password" class="form-control" id="card-password" type="password">
+                      <span asp-validation-for="Password"></span>
+                    </div>
+                    <div class="row flex-between-center">
+                      <div class="col-auto">
+                        <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="card-checkbox" checked="checked"><label class="form-check-label mb-0" for="card-checkbox">مرا به خاطر بسپار</label></div>
+                      </div>
+                      <div class="col-auto"><a class="fs--1" href="/Admin/pages/authentication/card/forgot-password.html">رمز عبور را فراموش کرده اید؟</a></div>
+                    </div>
+                    <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">ورود</button></div>
+                  </form>
+                  <div class="position-relative mt-4">
+                    <hr class="bg-300">
+                    <div class="divider-content-center">یا با وارد شوید</div>
+                  </div>
+                  <div class="row g-2 mt-2">
+                    <div class="col-sm-6"><a class="btn btn-outline-google-plus btn-sm d-block w-100" href="#"><span class="fab fa-google-plus-g me-2" data-fa-transform="grow-8"></span>گوگل</a></div>
+                    <div class="col-sm-6"><a class="btn btn-outline-facebook btn-sm d-block w-100" href="#"><span class="fab fa-facebook-square me-2" data-fa-transform="grow-8"></span>فیس بوک</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- ===============================================-->
+<!--    End of Main Content-->
+<!-- ===============================================-->
+
+<!-- ===============================================-->
+<!--    JavaScripts-->
+<!-- ===============================================-->
+<script src="/Admin/vendors/popper/popper.min.js"></script>
+<script src="/Admin/vendors/bootstrap/bootstrap.min.js"></script>
+<script src="/Admin/vendors/anchorjs/anchor.min.js"></script>
+<script src="/Admin/vendors/is/is.min.js"></script>
+
+<script src="/Admin/assets/js/momenjs.js"></script>
+<script src="/Admin/assets/js/moment-range.js"></script>
+<script src="/Admin/assets/js/flatpickr.full.js"></script>
+<script src="/Admin/assets/js/flatpickr.local-fa.js"></script>
+<script src="/Admin/assets/js/dayjs.local-fa.js"></script>
+    <script src="/Admin/vendors/dayjs/dayjs.min.js"></script>
+
+    <script src="/Admin/vendors/fontawesome/all.min.js"></script>
+    <script src="/Admin/vendors/lodash/lodash.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="/Admin/vendors/list.js/list.min.js"></script>
+<script src="/Admin/assets/js/theme.js"></script>
+
+</body>
+
+</html>

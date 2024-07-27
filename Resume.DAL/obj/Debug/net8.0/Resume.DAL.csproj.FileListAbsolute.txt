@@ -1,0 +1,14 @@
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\bin\Debug\net8.0\Resume.DAL.deps.json
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\bin\Debug\net8.0\Resume.DAL.runtimeconfig.json
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\bin\Debug\net8.0\Resume.DAL.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\bin\Debug\net8.0\Resume.DAL.pdb
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.csproj.AssemblyReference.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.AssemblyInfoInputs.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.AssemblyInfo.cs
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\refint\Resume.DAL.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.pdb
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\Resume.DAL.genruntimeconfig.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.DAL\obj\Debug\net8.0\ref\Resume.DAL.dll

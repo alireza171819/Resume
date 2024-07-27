@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@ViewData["Title"] - Resume.Web</title>
+
+    <link rel="shortcut icon" href="/CV/img/favicon.ico">
+
+    <link rel="stylesheet" href="/CV/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/CV/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/CV/css/animations.css" type="text/css">
+    <link rel="stylesheet" href="/CV/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="/CV/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/CV/css/main-dark-1.css" type="text/css">
+
+    <script src="/CV/js/modernizr.custom.js"></script>
+
+    <meta name="theme-color" content="#56b887">
+</head>
+<body>  
+     <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(/CV/img/main_bg_1.jpg);"></div>
+    <!-- /Animated Background -->
+
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"></fegaussianblur>
+            <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"></fecolormatrix>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <!-- /Loading animation -->
+
+    <div class="half-bg"></div>
+
+    <div class="page">
+        <div class="page-content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <partial name="_FooterScripts"/>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

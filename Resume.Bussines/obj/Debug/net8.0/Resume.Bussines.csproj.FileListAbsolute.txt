@@ -1,0 +1,15 @@
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\bin\Debug\net8.0\Resume.Bussines.deps.json
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\bin\Debug\net8.0\Resume.Bussines.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\bin\Debug\net8.0\Resume.Bussines.pdb
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\bin\Debug\net8.0\Resume.DAL.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\bin\Debug\net8.0\Resume.DAL.pdb
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.csproj.AssemblyReference.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.AssemblyInfoInputs.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.AssemblyInfo.cs
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.csproj.CoreCompileInputs.cache
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.B.916C1AAF.Up2Date
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\refint\Resume.Bussines.dll
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\Resume.Bussines.pdb
+C:\Users\Minipc\Desktop\MyResume\Resume\Resume.Bussines\obj\Debug\net8.0\ref\Resume.Bussines.dll

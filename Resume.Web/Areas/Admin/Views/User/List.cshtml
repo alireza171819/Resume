@@ -1,0 +1,89 @@
+﻿@model FilterUserViewModel
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div class="row flex-between-end">
+            <div class="col-auto align-self-center">
+                <h5 class="mb-0" data-anchor="data-anchor" id="‌">‌<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#تولتیپ‌ها" style="padding-left: 0.375em;"></a></h5>
+                <p class="mb-0 mt-2 mb-0">
+                    <div class="col-auto ms-auto">
+                        <div class="nav nav-pills nav-pills-falcon flex-grow-1 mt-2" role="tablist"><button class="btn btn-sm active" data-bs-toggle="pill" data-bs-target="#dom-8d062947-8b0a-4c03-a1f1-3f04164f255f" type="button" role="tab" aria-controls="dom-8d062947-8b0a-4c03-a1f1-3f04164f255f" aria-selected="true" id="tab-dom-8d062947-8b0a-4c03-a1f1-3f04164f255f">پیش نمایش</button><button class="btn btn-sm" data-bs-toggle="pill" data-bs-target="#dom-18a45aa4-ba8a-4deb-81fb-c621b3c820fe" type="button" role="tab" aria-controls="dom-18a45aa4-ba8a-4deb-81fb-c621b3c820fe" aria-selected="false" id="tab-dom-18a45aa4-ba8a-4deb-81fb-c621b3c820fe">کد</button></div>
+                    </div>
+            </div>
+        </div>
+        <div class="card-body bg-light">
+            <div class="tab-content">
+                <div class="tab-pane preview-tab-pane active" role="tabpanel" aria-labelledby="tab-dom-8d062947-8b0a-4c03-a1f1-3f04164f255f" id="dom-8d062947-8b0a-4c03-a1f1-3f04164f255f">
+                    <form id="filter_search" class="row g-3 needs-validation" novalidate="" asp-action="List" method="post">
+                        <input asp-for="Page" type="hidden"/>
+                        <div class="col-md-4 position-relative">
+                            <label class="form-label" asp-for="@Model.Username" for="validationTooltipUsername"></label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend"></span><input class="form-control" asp-for="@Model.Username" id="validationTooltipUsername" type="text" aria-describedby="validationTooltipUsernamePrepend" required="">
+                                <div class="invalid-tooltip">لطفا یک نام کاربری منحصر به فرد و معتبر انتخاب کنید.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-relative">
+                            <label class="form-label" asp-for="@Model.Phone" for="validationTooltip03"></label><input class="form-control" asp-for="@Model.Phone" id="validationTooltip03" type="text" required="">
+                            @* <div class="invalid-tooltip">لطفا یک شهر معتبر ارائه دهید.</div> *@
+                        </div>
+                        <div class="col-md-3 position-relative">
+                            <label class="form-label" asp-for="@Model.Gender" for="validationTooltip04"></label><select asp-for="@Model.Gender" class="form-select" id="validationTooltip04" required="">
+                                <option selected="" disabled="" value="">انتخاب کنید...</option>
+                                <option>مرد</option>
+                                <option>زن</option>
+                            </select>
+                           @*  <div class="invalid-tooltip">لطفاً یک حالت معتبر انتخاب کنید.</div> *@
+                        </div>
+                        <div class="col-12"><button class="btn btn-primary" type="submit">جستوجو</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <!-- Card Body -->
+            <div class="card-body pt-0">
+                <div class="tab-content">
+                    <div class=" preview-tab-pane" role="tabpanel" aria-labelledby="tab-dom-41755341-f9f5-415a-acd4-1d501e1c6abd" id="dom-41755341-f9f5-415a-acd4-1d501e1c6abd">
+                        <div class="table-responsive scrollbar">
+                            <table class="table table-hover table-striped overflow-hidden">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">نام کاربر</th>
+                                        <th scope="col">ایمیل</th>
+                                        <th scope="col">تلفن</th>
+                                        <th scope="col">تاریخ تولد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Entities)
+                                    {
+                                        <tr class="align-middle">
+                                            <td class="text-nowrap">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-xl">
+                                                   @*      <img class="rounded-circle" src="../../assets/img/team/4.jpg" alt="" /> *@
+                                                    </div>
+                                                    <div class="ms-2">@item.Username</div>
+                                                </div>
+                                            </td>
+                                            <td class="text-nowrap">@item.Email</td>
+                                            <td class="text-nowrap">@item.Phone</td>
+                                            <td class="text-nowrap">@item.DateOfBirth</td>
+                                            <td class="text-end">
+                                                <div>
+                                                    <button class="btn p-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><span class="text-500 fas fa-edit"></span></button>
+                                                    <button class="btn p-0 ms-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><span class="text-500 fas fa-trash-alt"></span></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <partial name="_AdminPaginTables" model="@Model.GetCurrentPaging()"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

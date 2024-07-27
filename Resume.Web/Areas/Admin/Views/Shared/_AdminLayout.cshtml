@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>ادمین</title>
+    <partial name="_Head"/>
+</head>
+<body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <div class="container" data-layout="container">
+            <script>
+                var isFluid = JSON.parse(localStorage.getItem('isFluid'));
+                if (isFluid) {
+                    var container = document.querySelector('[data-layout]');
+                    container.classList.remove('container');
+                    container.classList.add('container-fluid');
+                }
+            </script>
+            @await Component.InvokeAsync(typeof(RigthSlideViewComponent))
+            <div class="content">
+               <partial name="_TopNavbar" />
+               @RenderBody();
+            </div>
+            @await Component.InvokeAsync("LogIn");
+        </div>
+    </main>
+    <partial name="_ThemSetting" />
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <partial name="_Footer" />
+   
+</body>
+
+</html>

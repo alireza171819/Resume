@@ -1,0 +1,118 @@
+﻿
+<header id="site_header" class="header mobile-menu-hide">
+    <div class="header-content">
+      @*   <div class="header-lng">
+            <ul>
+                <li>
+                    <a href="#" class="active">فا</a>
+                </li>
+                <li>
+                    <a href="#">En</a>
+                </li>
+            </ul>
+        </div> *@
+        <div class="header-photo">
+            <img src="/CV/img/main_photo.jpg" alt="Alex Smith">
+        </div>
+        <div class="header-titles">
+            <h2>علی رضا خلیلی</h2>
+            <h4>طراح وب</h4>
+        </div>
+    </div>
+
+    <ul class="main-menu">
+        <li>
+            <a href="#about-me" class="nav-anim">
+                <span class="menu-icon lnr lnr-user"></span>
+                <span class="link-text">درباره من</span>
+            </a>
+        </li>
+        <li>
+            <a href="#resume" class="nav-anim">
+                <span class="menu-icon lnr lnr-graduation-hat"></span>
+                <span class="link-text">رزومه</span>
+            </a>
+        </li>
+        <li>
+            <a href="#portfolio" class="nav-anim">
+                <span class="menu-icon lnr lnr-briefcase"></span>
+                <span class="link-text">نمونه‌کارها</span>
+            </a>
+        </li>
+        <li>
+            <a href="#blog" class="nav-anim">
+                <span class="menu-icon lnr lnr-book"></span>
+                <span class="link-text">بلاگ</span>
+            </a>
+        </li>
+        <li>
+            <a href="#contact" class="nav-anim">
+                <span class="menu-icon lnr lnr-envelope"></span>
+                <span class="link-text">تماس</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="social-links">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="info-list">
+        <ul>
+            <li>
+                <span class="value ltr-text">0912 345 67 89</span>
+            </li>
+
+            <li>
+                <span class="value"><a href="mailto:info@example.com">info@example.com</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header-buttons">
+        <a href="#" target="_blank" class="btn btn-primary">دریافت رزومه</a>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<!-- End Mobile Navigation -->
+<!-- Arrows Nav -->
+<div class="lmpixels-arrows-nav">
+    <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
+    <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
+</div>
+<!-- End Arrows Nav -->
+
+<div class="content-area">
+    <div class="animated-sections">
+
+        <!-- About Me Subpage -->
+        @await Component.InvokeAsync(typeof(AboutMeViewComponent))
+        <!-- End of About Me Subpage -->
+
+        <!-- Resume Subpage -->
+        @await Component.InvokeAsync(typeof(ResumeViewComponent))
+        <!-- End of Resume Subpage -->
+
+        <!-- Portfolio Subpage -->
+        @await Component.InvokeAsync(typeof(ProtfolioViewComponent))
+        <!-- End of Portfolio Subpage -->
+
+        <!-- Blog Subpage -->
+        @await Component.InvokeAsync(typeof(BlogViewComponent))
+        <!-- End of Blog Subpage -->
+
+        <!-- Contact Subpage -->
+        @await Component.InvokeAsync(typeof(ContactViewComponent))
+        <!-- End of Contact Subpage -->
+    </div>
+</div>

@@ -1,0 +1,7 @@
+html[dir='rtl'] .choices[data-type*=select-one]:after {
+
+
+    left: 11.5px!important;
+    right: auto!important;
+
+}
